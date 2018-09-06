@@ -32,7 +32,7 @@
                                         },
                        "masterProfile":  {
                                              "count":  1,
-                                             "dnsPrefix":  "k8s-12345",
+                                             "dnsPrefix":  "k8s-23456",
                                              "vmSize":  "Standard_D2_v2",
                                              "StorageProfile":  "StorageAccount"
                                          },
@@ -56,8 +56,8 @@
                                                     }
                                         },
                        "servicePrincipalProfile":  {
-                                                       "clientId":  "c0d7dc0b-fa39-4e1f-a002-b21d103b59a0",
-                                                       "secret":  "l3e1go2NILfWHrSs1CQ/iyCdQp3I1GcmODwwgbiCkLE="
+                                                       "clientId":  null,
+                                                       "secret":  null
                                                    }
                    }
 }

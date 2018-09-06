@@ -1,0 +1,63 @@
+{
+  "apiVersion": "vlabs",
+  "properties": {
+    "orchestratorProfile": {
+      "orchestratorType": "Kubernetes",
+      "orchestratorRelease": "1.7",
+	    "kubernetesConfig": {
+         "CustomHyperkubeImage": "msazurestackdocker/kubernetes:20180321.1.1.7.14",
+         "networkPolicy": "none"
+      }
+    },
+	  "cloudProfile": {
+	      "name": "AzureStackCloud",
+        "managementPortalURL": "",
+        "publishSettingsURL": "",
+        "serviceManagementEndpoint": "https://management.azurestackci09.onmicrosoft.com/94d1132d-e74b-4ee3-b726-4d763cab3705",
+        "resourceManagerEndpoint": "https://management.local.azurestack.external",
+        "activeDirectoryEndpoint": "https://login.windows.net/",
+        "galleryEndpoint": "https://portal.local.azurestack.external:30015/",
+        "keyVaultEndpoint": "https://vault.local.azurestack.external",
+        "graphEndpoint": "https://graph.windows.net/",
+        "storageEndpointSuffix": "local.azurestack.external",
+        "sqlDatabaseDNSSuffix": "",
+        "trafficManagerDNSSuffix": "",
+        "keyVaultDNSSuffix": "vault.local.azurestack.external",
+        "serviceBusEndpointSuffix": "",
+        "serviceManagementVMDNSSuffix": "cloudapp.net",
+        "resourceManagerVMDNSSuffix": "cloudapp.azurestack.external",
+        "containerRegistryDNSSuffix": "",
+        "resourceManagerRootCertificate": "83E04DD9CFCBA471FF442316F9DAFAD8A9A9ADE7",
+        "location": "local"
+	  },
+    "masterProfile": {
+      "count": 1,
+      "dnsPrefix": "radhikgu-k81d",
+      "vmSize": "Standard_D2_v2",
+	    "StorageProfile" : "StorageAccount"
+    },
+    "agentPoolProfiles": [
+      {
+        "name": "agentpool1",
+        "count": 2,
+        "vmSize": "Standard_D2_v2",
+        "availabilityProfile": "AvailabilitySet",
+		    "StorageProfile" : "StorageAccount"
+      }
+    ],
+    "linuxProfile": {
+      "adminUsername": "azureuser",
+      "ssh": {
+        "publicKeys": [
+          {
+            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT59HdrzOj5zJawLXjuoKeMjw1zdXtMuNnon70/I+N9Tl56O8kcltRBUgX0bcBpnb0bTDHlVQmi2xZcsR8srKSRS1uQo4WRfRlwFtGioHsiBfpBeyS4ZONPjKjBH5ar5/6RB0kvyDnI1TD502nIwYMAgLqw/EUoIcl+hATiCe0dxODWgg8W4wK5X6Jvs/ekII1JPUZRXYFSaQ1OvSnBWf3SnX4C41yG6CXPAfCvQgZaInl5aCE4hijj6aBS6kmlAx8ItLr7B5L63mLKhqBz0MJhpVwKhNJrNlHBdJfD/eMeJ4t54IQElADW1W3SEYtI3N8hCZZwXQPuvoAoeJQw/af azureuser@azconsole"
+          }
+        ]
+      }
+    },
+    "servicePrincipalProfile": {
+      "clientId": "a095d8d1-9c02-425e-a0cb-fd7b0f3c34a1",
+      "secret": "kwyV+r1ja+bYFj/KzBJg9mMWaACr86bmpUuLbfNmrUE="
+    }
+  }
+}
