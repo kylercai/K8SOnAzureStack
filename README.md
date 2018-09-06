@@ -1,0 +1,1 @@
+Please refer to the Install_K8S_on_AzureStack_Guide.docx.
